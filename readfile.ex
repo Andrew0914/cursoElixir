@@ -2,8 +2,7 @@ defmodule ReadFile do
 
     def send_repeated(linea) do
         repeated_words = %{}
-
-        Enum.each(String.split(linea , " ") , 
+        Enum.map(String.split(linea , [" " , "." , ","]) , 
             fn palabra -> 
                 repeated_words = Map.update(repeated_words , palabra , 1 , fn x -> x + 1 end)
             end)
