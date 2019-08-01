@@ -34,3 +34,6 @@ Para recargar cambios en el modulo (estando en el iex)
 
 Para ejecutar todas las pruebas del proyecto incluso se puede probar la documentacion doctest
 > mix test
+
+Si se agrega un nuevo modulo que no existe se debe compilar para que detecte los cambios  estando en iex
+> c "lib/word_count.ex"

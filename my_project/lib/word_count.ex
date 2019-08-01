@@ -53,11 +53,11 @@ defmodule WordCount do
       |> Enum.reduce(%{}, &update_count/2)
     end
   
-    def update_count(word, map) do
+    defp update_count(word, map) do
       Map.update(map, word, 1, &(&1 + 1))
     end
     
-    def merge_counts(m1, m2) do
+    defp merge_counts(m1, m2) do
       Map.merge(m1, m2, fn _k, v1, v2 -> v1 + v2 end) 
     end
   end
