@@ -26,14 +26,9 @@ defmodule WordCount do
       file_name
       |> File.read!()
       |> String.split("\n")
-      |> Enum.chunk_every(100_000)
-      |> Enum.map( fn chunk -> 
-          chunk
-          |> Enum.map(fn str -> Task.async(fn -> word_count(str) end) end) 
-          |> Enum.map(fn task -> Task.await(task) end)
-          |> Enum.reduce(%{}, &merge_counts/2)
-        end)
-        |> Enum.reduce(%{}, &merge_counts/2)
+      |> Enum.map(fn str -> Task.async(fn -> word_count(str) end) end) 
+      |> Enum.map(fn task -> Task.await(task) end)
+      |> Enum.reduce(%{}, &merge_counts/2)
     end
     
     @doc """

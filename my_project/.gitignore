@@ -22,5 +22,3 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 my_project-*.tar
 
-lorem_ipsum_300_000.txt
-
