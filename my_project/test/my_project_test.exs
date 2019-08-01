@@ -3,6 +3,6 @@ defmodule MyProjectTest do
   doctest MyProject
 
   test "greets the world" do
-    assert MyProject.hello() == :world
+    assert MyProject.hello("Andrew") == "Hello Andrew !!"
   end
 end

@@ -8,11 +8,14 @@ defmodule MyProject do
 
   ## Examples
 
-      iex> MyProject.hello()
-      :world
+      iex> MyProject.hello("Dany")
+      "Hello Dany !!"
+
+      iex> MyProject.hello("Isabel")
+      "Hello Isabel !!"
 
   """
-  def hello do
-    :world
+  def hello(name) do
+    "Hello #{name} !!"
   end
 end

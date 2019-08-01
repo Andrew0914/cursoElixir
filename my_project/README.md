@@ -22,8 +22,15 @@ be found at [https://hexdocs.pm/my_project](https://hexdocs.pm/my_project).
 ## Comandos para el proyecto
 Para nuevo proyecto
 > mix new project
+
 Para levantar el iex desde la raiz del proyecto y compilarlo
 > iex -S mix
+
 Para obtener las dependencias en mix.exs
 > mix deps.get
 
+Para recargar cambios en el modulo (estando en el iex)
+> r Modulo 
+
+Para ejecutar todas las pruebas del proyecto incluso se puede probar la documentacion doctest
+> mix test
