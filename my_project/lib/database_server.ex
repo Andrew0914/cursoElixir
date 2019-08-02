@@ -1,12 +1,11 @@
 defmodule DatabaseServer do
-  
+
   require Logger
 
   def start do
-    initial_state = 0
-    spawn(fn -> 
-      initial_state = 0
-      loop(initial_state)
+      spawn(fn ->
+        initial_state = 0
+        loop(initial_state)
     end)
   end
 

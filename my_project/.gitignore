@@ -24,3 +24,23 @@ my_project-*.tar
 
 lorem_ipsum_300_000.txt
 
+*.beam
+
+*.elixir
+
+*.fetch
+
+*.app
+
+*.xref
+
+*.config
+
+*.conf
+
+*.elixir_scm
+
+*.protocols
+
+*.hrl
+
